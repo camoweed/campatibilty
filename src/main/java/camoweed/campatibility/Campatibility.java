@@ -27,6 +27,7 @@ public class Campatibility implements ModInitializer {
 	boolean stardew = FabricLoader.getInstance().isModLoaded("stardew");
 	boolean paxels = FabricLoader.getInstance().isModLoaded("paxels");
 	boolean heatedSteel = FabricLoader.getInstance().isModLoaded("superheatedsteel");
+	boolean aether = FabricLoader.getInstance().isModLoaded("aether");
 
 	Key KEY = Key.of(MOD_ID);
 	public static final boolean RoseToolQuests;
@@ -36,6 +37,7 @@ public class Campatibility implements ModInitializer {
 	public static final boolean PaxelsandRoseTools;
 	public static final boolean PaxelsandBTF;
 	public static final boolean PaxelsandSuperheatedSteel;
+	public static final boolean PaxelsandAether;
 
 	public static final TomlConfigHandler CFG;
 	static {
@@ -49,6 +51,7 @@ public class Campatibility implements ModInitializer {
 		cfg.addEntry("Items.PaxelsxRoseTools", "Rose Paxel", true);
 		cfg.addEntry("Items.PaxelsxBetterThanFishing", "Iridescite Paxel", true);
 		cfg.addEntry("Items.PaxelsxSuperheatedSteel", "Superheated Steel Paxel", true);
+		cfg.addEntry("Items.PaxelsxAether", "Aether tool tier Paxels", true);
 
 		CFG = new TomlConfigHandler(MOD_ID, cfg);
 
@@ -59,6 +62,7 @@ public class Campatibility implements ModInitializer {
 		PaxelsandRoseTools = CFG.getBoolean("Items.PaxelsxRoseTools");
 		PaxelsandBTF = CFG.getBoolean("Items.PaxelsxBetterThanFishing");
 		PaxelsandSuperheatedSteel = CFG.getBoolean("Items.PaxelsxSuperheatedSteel");
+		PaxelsandAether = CFG.getBoolean("Items.PaxelsxAether");
 	}
 
 	@Override
@@ -68,6 +72,7 @@ public class Campatibility implements ModInitializer {
 		if (roseTools && paxels && PaxelsandRoseTools) {LOGGER.info("☑ Paxels + Rose Tools is active!");PaxelandRoseToolsLoaded.init();}
 		if (btfishing && paxels && PaxelsandBTF) {LOGGER.info("☑ Paxels + Better than Fishing is active!");PaxelandBTFLoaded.init();}
 		if (heatedSteel && paxels && PaxelsandSuperheatedSteel) {LOGGER.info("☑ Paxels + Superheated Steel is active!");PaxelandSuperheatedSteelLoaded.init();}
+		if (aether && paxels && PaxelsandAether) {LOGGER.info("☑ Paxels + Aether is active!");PaxelsandAetherLoaded.init();}
 	}
 	public void beforeGameStart() {}
 	public void afterGameStart() {
@@ -77,7 +82,7 @@ public class Campatibility implements ModInitializer {
 			boolean stardewActive = false;
 			if (roseTools && RoseToolQuests) {LOGGER.info("☑ Rose Tools is active!");RoseToolsLoaded.init(); roseToolsActive = true;}
 			if (btfishing && BTFishingQuests) {LOGGER.info("☑ Better than Fishing is active!");BTFishingLoaded.init(); btfActive = true;}
-			if (stardew && StarwdewFarmingQuests) {LOGGER.info("☑ Better than Fishing is active!");StardewLoaded.init(); stardewActive = true;}
+			if (stardew && StarwdewFarmingQuests) {LOGGER.info("☑ Stardew Farming is active!");StardewLoaded.init(); stardewActive = true;}
 			if(!btfActive && !roseToolsActive && !stardewActive) {LOGGER.info("⚠ No modded quests active");new DefaultQuest().reloadClient();}
 
 		}
@@ -116,6 +121,13 @@ public class Campatibility implements ModInitializer {
 			CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PaxelSuperheatedSteelItems::initializeItems);
 			ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PaxelSuperheatedSteelModels::beforeClientStart);
 			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PaxelSuperheatedSteelModels::initItemModels);
+		}
+	}
+	private static class PaxelsandAetherLoaded {
+		static void init() {
+			CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PaxelAetherItems::initializeItems);
+			ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PaxelAetherModels::beforeClientStart);
+			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PaxelAetherModels::initItemModels);
 		}
 	}
 }
