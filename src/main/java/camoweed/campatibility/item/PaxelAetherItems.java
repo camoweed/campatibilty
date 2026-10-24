@@ -25,8 +25,8 @@ public class PaxelAetherItems {
 		TOOL_PAXEL_SKYROOT = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
 			.build(new ItemToolPaxel(
-				"tool.paxel.zanite",
-				itemKey("tool_paxel_zanite"),
+				"tool.paxel.skyroot",
+				itemKey("skyroot"),
 				20020,
 				AetherToolMaterial.SKYROOT));
 		TOOL_PAXEL_HOLYSTONE = new ItemBuilder("campatibility")
@@ -60,8 +60,8 @@ public class PaxelAetherItems {
 		TOOL_PAXEL_PHEONIX = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
 			.build(new ItemToolPaxel(
-				"tool.paxel.pheonix",
-				itemKey("tool_paxel_pheonix"),
+				"tool.paxel.phoenix",
+				itemKey("tool_paxel_phoenix"),
 				20025,
 				AetherToolMaterial.PHOENIX));
 	}

@@ -55,7 +55,7 @@ public class PaxelAetherModels {
 			.setDisplayPos("thirdperson_lefthand", HANDHELD_THIRD_PERSON_LEFT_HAND)
 		);
 		dispatcher.addDispatch(new ItemModelStandard(PaxelAetherItems.TOOL_PAXEL_PHEONIX)
-			.setIcon("campatibility:item/tool_paxel_pheonix")
+			.setIcon("campatibility:item/tool_paxel_phoenix")
 			.setDisplayPos("firstperson_righthand", HANDHELD_FIRST_PERSON_RIGHT_HAND)
 			.setDisplayPos("firstperson_lefthand", HANDHELD_FIRST_PERSON_LEFT_HAND)
 			.setDisplayPos("thirdperson_righthand", HANDHELD_THIRD_PERSON_RIGHT_HAND)
