@@ -24,9 +24,9 @@ public class PaxelAetherItems {
 	public static void initializeItems() {
 		TOOL_PAXEL_SKYROOT = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
-			.build(new ItemToolPaxel(
+			.build(new PaxelAetherTool(
 				"tool.paxel.skyroot",
-				itemKey("skyroot"),
+				itemKey("tool_paxel_skyroot"),
 				20020,
 				AetherToolMaterial.SKYROOT));
 		TOOL_PAXEL_HOLYSTONE = new ItemBuilder("campatibility")
