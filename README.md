@@ -19,4 +19,4 @@ depending on your modlist you can see different benefits
 - Superheated Paxel
 - Aether Paxels
 
-♪ armour bar gui textures 
+![Paxels and Better with Aether mod in the ultimate crossover.](https://assets.rosesmp.com/share/forumimages/campatibility/paxelaetherrecipes.png)

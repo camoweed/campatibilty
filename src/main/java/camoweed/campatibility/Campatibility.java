@@ -128,6 +128,8 @@ public class Campatibility implements ModInitializer {
 			CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PaxelAetherItems::initializeItems);
 			ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PaxelAetherModels::beforeClientStart);
 			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PaxelAetherModels::initItemModels);
+			CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PaxelAetherRecipes::initNamespaces);
+			CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PaxelAetherRecipes::onRecipesReady);
 		}
 	}
 }
