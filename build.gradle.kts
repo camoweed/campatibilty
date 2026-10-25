@@ -67,6 +67,7 @@ dependencies {
 	compileOnly (files("libs/superheatedsteel-1.0.0+8.0.1.jar"))
 	compileOnly (files("libs/better-with-aether-1.1.1.jar"))
 	compileOnly (files("libs/commandly-1.1.6+8.0.1.jar"))
+	compileOnly (files("libs/pepeethings-1.3.3+8.0.1.jar"))
 }
 java {
 	toolchain {

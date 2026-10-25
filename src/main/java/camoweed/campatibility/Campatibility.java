@@ -4,6 +4,9 @@ import camoweed.campatibility.api.impl.vintagequesting.BTFishingQuests;
 import camoweed.campatibility.api.impl.vintagequesting.DefaultQuest;
 import camoweed.campatibility.api.impl.vintagequesting.RoseToolsQuests;
 import camoweed.campatibility.api.impl.vintagequesting.StardewQuests;
+import camoweed.campatibility.item.hammer.PepeeThingsRoseToolsItems;
+import camoweed.campatibility.item.hammer.PepeeThingsRoseToolsModels;
+import camoweed.campatibility.item.hammer.PepeeThingsRoseToolsRecipes;
 import camoweed.campatibility.item.paxel.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
@@ -28,6 +31,7 @@ public class Campatibility implements ModInitializer {
 	boolean paxels = FabricLoader.getInstance().isModLoaded("paxels");
 	boolean heatedSteel = FabricLoader.getInstance().isModLoaded("superheatedsteel");
 	boolean aether = FabricLoader.getInstance().isModLoaded("aether");
+	boolean things = FabricLoader.getInstance().isModLoaded("pepeethings");
 
 	Key KEY = Key.of(MOD_ID);
 	public static final boolean RoseToolQuests;
@@ -38,6 +42,7 @@ public class Campatibility implements ModInitializer {
 	public static final boolean PaxelsandBTF;
 	public static final boolean PaxelsandSuperheatedSteel;
 	public static final boolean PaxelsandAether;
+	public static final boolean PeepeeThingsandRoseTools;
 
 	public static final TomlConfigHandler CFG;
 	static {
@@ -52,6 +57,7 @@ public class Campatibility implements ModInitializer {
 		cfg.addEntry("Items.PaxelsxBetterThanFishing", "Iridescite Paxel", true);
 		cfg.addEntry("Items.PaxelsxSuperheatedSteel", "Superheated Steel Paxel", true);
 		cfg.addEntry("Items.PaxelsxAether", "Aether tool tier Paxels", true);
+		cfg.addEntry("Items.ThingsxRoseTools", "Aether tool tier Paxels", true);
 
 		CFG = new TomlConfigHandler(MOD_ID, cfg);
 
@@ -63,6 +69,7 @@ public class Campatibility implements ModInitializer {
 		PaxelsandBTF = CFG.getBoolean("Items.PaxelsxBetterThanFishing");
 		PaxelsandSuperheatedSteel = CFG.getBoolean("Items.PaxelsxSuperheatedSteel");
 		PaxelsandAether = CFG.getBoolean("Items.PaxelsxAether");
+		PeepeeThingsandRoseTools = CFG.getBoolean("Items.ThingsxRoseTools");
 	}
 
 	@Override
@@ -73,6 +80,7 @@ public class Campatibility implements ModInitializer {
 		if (btfishing && paxels && PaxelsandBTF) {LOGGER.info("☑ Paxels + Better than Fishing is active!");PaxelandBTFLoaded.init();}
 		if (heatedSteel && paxels && PaxelsandSuperheatedSteel) {LOGGER.info("☑ Paxels + Superheated Steel is active!");PaxelandSuperheatedSteelLoaded.init();}
 		if (aether && paxels && PaxelsandAether) {LOGGER.info("☑ Paxels + Aether is active!");PaxelsandAetherLoaded.init();}
+		if (things && roseTools && PeepeeThingsandRoseTools) {LOGGER.info("☑ Pepee's Things + Rose Tools is active!");PeepeeThingsandRoseToolsLoaded.init();}
 	}
 	public void beforeGameStart() {}
 	public void afterGameStart() {
@@ -130,6 +138,15 @@ public class Campatibility implements ModInitializer {
 			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PaxelAetherModels::initItemModels);
 			CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PaxelAetherRecipes::initNamespaces);
 			CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PaxelAetherRecipes::onRecipesReady);
+		}
+	}
+	private static class PeepeeThingsandRoseToolsLoaded {
+		static void init() {
+			CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PepeeThingsRoseToolsItems::initializeItems);
+			ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PepeeThingsRoseToolsModels::beforeClientStart);
+			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PepeeThingsRoseToolsModels::initItemModels);
+			CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PepeeThingsRoseToolsRecipes::initNamespaces);
+			CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PepeeThingsRoseToolsRecipes::onRecipesReady);
 		}
 	}
 }
