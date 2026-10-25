@@ -1,6 +1,5 @@
-package camoweed.campatibility.item;
+package camoweed.campatibility.item.paxel;
 
-import luke.paxels.compat.commandly.PaxelCommandlyRules;
 import net.example.superheatedsteel.item.SuperheatedIgnite;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockLogicLog;
@@ -9,7 +8,6 @@ import net.minecraft.core.block.entity.TileEntityActivator;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.data.gamerule.GameRules;
 import net.minecraft.core.data.gamerule.TreecapitatorHelper;
-import net.minecraft.core.data.tag.Tag;
 import net.minecraft.core.entity.Mob;
 import net.minecraft.core.entity.player.Player;
 import net.minecraft.core.enums.EnumBlockSoundEffectType;

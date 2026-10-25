@@ -17,5 +17,6 @@ depending on your modlist you can see different benefits
 - Rose Paxel
 - Iridescite Paxel
 - Superheated Paxel
+- Aether Paxels
 
 ♪ armour bar gui textures 

@@ -1,4 +1,4 @@
-package camoweed.campatibility.item;
+package camoweed.campatibility.item.paxel;
 
 import luke.paxels.ItemToolPaxel;
 import net.minecraft.core.item.Item;
@@ -31,35 +31,35 @@ public class PaxelAetherItems {
 				AetherToolMaterial.SKYROOT));
 		TOOL_PAXEL_HOLYSTONE = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
-			.build(new ItemToolPaxel(
+			.build(new PaxelAetherToolHolystone(
 				"tool.paxel.holystone",
 				itemKey("tool_paxel_holystone"),
 				20021,
 				AetherToolMaterial.HOLYSTONE));
 		TOOL_PAXEL_ZANITE = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
-			.build(new ItemToolPaxel(
+			.build(new PaxelAetherToolZanite(
 				"tool.paxel.zanite",
 				itemKey("tool_paxel_zanite"),
 				20022,
 				AetherToolMaterial.ZANITE));
 		TOOL_PAXEL_GRAVITITE = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
-			.build(new ItemToolPaxel(
+			.build(new PaxelAetherToolGravitite(
 				"tool.paxel.gravitite",
 				itemKey("tool_paxel_gravitite"),
 				20023,
 				AetherToolMaterial.GRAVITITE));
 		TOOL_PAXEL_VALKYRIE = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
-			.build(new ItemToolPaxel(
+			.build(new PaxelAetherToolValkyrie(
 				"tool.paxel.valkyrie",
 				itemKey("tool_paxel_valkyrie"),
 				20024,
 				AetherToolMaterial.VALKYRIE));
 		TOOL_PAXEL_PHEONIX = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
-			.build(new ItemToolPaxel(
+			.build(new PaxelAetherToolPhoenix(
 				"tool.paxel.phoenix",
 				itemKey("tool_paxel_phoenix"),
 				20025,

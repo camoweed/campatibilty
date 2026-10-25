@@ -1,4 +1,4 @@
-package camoweed.campatibility.item;
+package camoweed.campatibility.item.paxel;
 
 import net.minecraft.client.render.item.model.ItemModelDispatcher;
 import net.minecraft.client.render.item.model.ItemModelStandard;

@@ -1,4 +1,4 @@
-package camoweed.campatibility.item;
+package camoweed.campatibility.item.paxel;
 
 import net.minecraft.client.render.item.model.ItemModelDispatcher;
 import net.minecraft.client.render.item.model.ItemModelStandard;
@@ -8,9 +8,9 @@ import turniplabs.halplibe.helper.TextureHelper;
 
 import static net.minecraft.client.render.item.model.ItemModelDispatcher.*;
 
-public class PaxelBTFModels {
+public class PaxelSuperheatedSteelModels {
 	public static void beforeClientStart() {
-		PaxelBTFModels.registerTextures();
+		PaxelSuperheatedSteelModels.registerTextures();
 	}
 
 	public static void registerTextures() {
@@ -19,8 +19,8 @@ public class PaxelBTFModels {
 		}
 	}
 	public static void initItemModels(ItemModelDispatcher dispatcher) {
-		dispatcher.addDispatch(new ItemModelStandard(PaxelBTFItems.TOOL_PAXEL_IRIDESCITE)
-			.setIcon("campatibility:item/tool_paxel_iridescite")
+		dispatcher.addDispatch(new ItemModelStandard(PaxelSuperheatedSteelItems.TOOL_PAXEL_SUPERHEATED_STEEL)
+			.setIcon("campatibility:item/tool_paxel_superheated_steel")
 			.setDisplayPos("firstperson_righthand", HANDHELD_FIRST_PERSON_RIGHT_HAND)
 			.setDisplayPos("firstperson_lefthand", HANDHELD_FIRST_PERSON_LEFT_HAND)
 			.setDisplayPos("thirdperson_righthand", HANDHELD_THIRD_PERSON_RIGHT_HAND)
