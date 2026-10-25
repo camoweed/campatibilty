@@ -14,9 +14,10 @@ depending on your modlist you can see different benefits
 ☻ full questline
 ### [Paxels](https://github.com/LukeisStuff/paxels)
 ⛏ crossover items
-- ![Rose Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/small_paxel_rose.png) Rose Paxel
-- ![Iridescite Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_iridescite.png) Iridescite Paxel
-- ![Superheated Steel Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_superheated_steel.png) Superheated Paxel
-- ![Skyroot Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_skyroot.png) Aether Paxels ![Holystone Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_holystone.png) ![Zanite Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_zanite.png) ![Gravitite Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_gravitite.png) ![Valkyrie Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_valkyrie.png) ![Phoenix Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_phoenix.png)
+
+![Rose Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/small_paxel_rose.png) Rose Paxel\
+![Iridescite Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_iridescite.png) Iridescite Paxel\
+![Superheated Steel Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_superheated_steel.png) Superheated Paxel\
+![Skyroot Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_skyroot.png) Aether Paxels ![Holystone Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_holystone.png) ![Zanite Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_zanite.png) ![Gravitite Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_gravitite.png) ![Valkyrie Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_valkyrie.png) ![Phoenix Paxel item texture.](https://assets.rosesmp.com/share/forumimages/campatibility/tool_paxel_phoenix.png)
 
 <!--![Paxels and Better with Aether mod in the ultimate crossover.](https://assets.rosesmp.com/share/forumimages/campatibility/paxelaetherrecipes.png)-->
