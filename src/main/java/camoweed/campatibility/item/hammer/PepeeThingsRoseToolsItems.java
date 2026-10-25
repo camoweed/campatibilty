@@ -2,7 +2,6 @@ package camoweed.campatibility.item.hammer;
 
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.item.Item;
-import qapy.pepeethings.ModConfig;
 import qapy.pepeethings.ModItems;
 import qapy.pepeethings.item.ItemToolHammer;
 import turniplabs.halplibe.helper.ItemBuilder;
@@ -21,7 +20,7 @@ public class PepeeThingsRoseToolsItems {
 			.build(new ItemToolHammer(
 				"tool.hammer.rose",
 				itemKey("tool_hammer_rose"),
-				ModConfig.itemID(),
+				20030,
 				ItemToolHammer.Tool.PICKAXE,
 				camoweed.rosesword.ModItems.roseToolMaterial,
 				BlockTags.MINEABLE_BY_PICKAXE));

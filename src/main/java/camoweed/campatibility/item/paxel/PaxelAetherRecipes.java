@@ -1,7 +1,6 @@
 package camoweed.campatibility.item.paxel;
 
 import net.minecraft.core.crafting.LookupFuelFurnace;
-import net.minecraft.core.data.registry.Registries;
 import net.minecraft.core.item.ItemStack;
 import teamport.aether.item.AetherItems;
 import turniplabs.halplibe.helper.RecipeBuilder;
@@ -58,11 +57,11 @@ public class PaxelAetherRecipes {
 
         LookupFuelFurnace.instance.addFuelEntry(PaxelAetherItems.TOOL_PAXEL_SKYROOT.id, 500);
 
-        Registries.ITEM_GROUPS.getItem("paxels:tool_paxels").add(PaxelAetherItems.TOOL_PAXEL_SKYROOT.getDefaultStack());
-        Registries.ITEM_GROUPS.getItem("paxels:tool_paxels").add(PaxelAetherItems.TOOL_PAXEL_HOLYSTONE.getDefaultStack());
-        Registries.ITEM_GROUPS.getItem("paxels:tool_paxels").add(PaxelAetherItems.TOOL_PAXEL_ZANITE.getDefaultStack());
-        Registries.ITEM_GROUPS.getItem("paxels:tool_paxels").add(PaxelAetherItems.TOOL_PAXEL_GRAVITITE.getDefaultStack());
-		Registries.ITEM_GROUPS.getItem("paxels:tool_paxels").add(PaxelAetherItems.TOOL_PAXEL_VALKYRIE.getDefaultStack());
-		Registries.ITEM_GROUPS.getItem("paxels:tool_paxels").add(PaxelAetherItems.TOOL_PAXEL_PHEONIX.getDefaultStack());
+//        Registries.ITEM_GROUPS.getItem("paxels:tool_paxels").add(PaxelAetherItems.TOOL_PAXEL_SKYROOT.getDefaultStack());
+//        Registries.ITEM_GROUPS.getItem("paxels:tool_paxels").add(PaxelAetherItems.TOOL_PAXEL_HOLYSTONE.getDefaultStack());
+//        Registries.ITEM_GROUPS.getItem("paxels:tool_paxels").add(PaxelAetherItems.TOOL_PAXEL_ZANITE.getDefaultStack());
+//        Registries.ITEM_GROUPS.getItem("paxels:tool_paxels").add(PaxelAetherItems.TOOL_PAXEL_GRAVITITE.getDefaultStack());
+//		Registries.ITEM_GROUPS.getItem("paxels:tool_paxels").add(PaxelAetherItems.TOOL_PAXEL_VALKYRIE.getDefaultStack());
+//		Registries.ITEM_GROUPS.getItem("paxels:tool_paxels").add(PaxelAetherItems.TOOL_PAXEL_PHEONIX.getDefaultStack());
     }
 }
