@@ -6,7 +6,6 @@ import net.minecraft.core.item.material.ToolMaterial;
 import net.minecraft.core.util.helper.MathHelper;
 import org.jetbrains.annotations.NotNull;
 import teamport.aether.block.AetherBlockTags;
-import teamport.aether.item.AetherHasCustomDamageType;
 
 import static teamport.aether.AetherGlobals.ZANITE_MULTIPLIER;
 

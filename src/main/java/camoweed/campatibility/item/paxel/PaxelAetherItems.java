@@ -1,6 +1,5 @@
 package camoweed.campatibility.item.paxel;
 
-import luke.paxels.ItemToolPaxel;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.Items;
 import teamport.aether.item.item_tool.AetherToolMaterial;
