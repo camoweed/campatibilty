@@ -139,3 +139,5 @@ item.campatibility.tool.hammer.rose.name=§e§pRose§r Hammer
 item.campatibility.tool.hammer.rose.desc=Hammer some stone with this mossy tool. Breaks only one block while crouching.
 item.campatibility.tool.hammer.iridescite.name=Iridescite Hammer
 item.campatibility.tool.hammer.iridescite.desc=Hammer some stone with this glistening tool. Breaks only one block while crouching.
+item.campatibility.tool.hammer.superheated_steel.name=Superheated Steel Hammer
+item.campatibility.tool.hammer.superheated_steel.desc=Hammer some stone with this unstable tool. Breaks only one block while crouching.

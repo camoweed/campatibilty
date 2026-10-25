@@ -21,7 +21,7 @@ public class PepeeThingsBTFItems {
 			.build(new ItemToolHammer(
 				"tool.hammer.iridescite",
 				itemKey("tool_hammer_iridescite"),
-				20030,
+				20031,
 				ItemToolHammer.Tool.PICKAXE,
 				ItemMaterials.iridesciteItem,
 				BlockTags.MINEABLE_BY_PICKAXE));
