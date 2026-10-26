@@ -4,6 +4,61 @@ uninstrusive mod compability
 
 # Features
 depending on your modlist you can see different benefits
+<style>td, th {text-align:center;}</style>
+<div style="">
+<table>
+<tr>
+<th>⭐</th>
+<th>Vintage Questing</th>
+<th>Rose Tools</th>
+<th>Better than Fishing</th>
+<th>Stardew Farming</th>
+<th>Paxels</th>
+<th>Aether</th>
+<th>Pepee's Things</th>
+<th>Superheated Steel</th>
+</tr>
+<td>Vintage Questing</td>
+<td>☻</td>
+<td>☑<br>Quests</td>
+<td>☑<br>Quests</td>
+<td>☑<br>Quests</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<tr>
+<td>Rose Tools</td>
+<td>☑<br>Quests</td>
+<td>☻</td>
+<td>☑<br>Paxel</td>
+<td>✘</td>
+<td>☑<br>Paxel</td>
+<td>✘</td>
+<td>☑<br>Hammer</td>
+<td>✘</td>
+</tr>
+<tr><td>Better than Fishing</td><td>☑<br>Quests</td><td>✘</td><td>☻</td><td>✘</td><td>☑<br>Paxel</td><td>✘</td><td>☑<br>Hammer</td>
+<td>✘</td>
+</tr>
+<tr><td>Stardew Farming</td><td>☑<br>Quests</td><td>✘</td><td>✘</td><td>☻</td><td>✘</td><td>✘</td><td>✘</td>
+<td>✘</td>
+</tr>
+<tr><td>Paxels</td><td>✘</td><td>☑<br>Paxel</td><td>☑<br>Paxel</td><td>✘</td><td>☻</td><td>☑<br>Paxels</td><td>✘</td>
+<td>☑<br>Paxel</td>
+</tr>
+<tr><td>Aether</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>☑<br>Paxels</td><td>☻</td><td>✘</td>
+<td>✘</td>
+</tr>
+<tr><td>Pepee's Things</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>☻</td>
+<td>☑<br>Hammer</td>
+</tr>
+<tr><td>Superheated Steel</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>☑<br>Paxel</td><td>✘</td><td>☑<br>Hammer</td>
+<td>☻</td>
+</tr>
+</table>
+</div>
+
 ### [Vintage Questing](https://github.com/MartinSVK12/vintage-questing)
 ☻ quests for other mods
 ### [Rose Tools](https://github.com/camoweed/rose-tools)
