@@ -28,9 +28,9 @@ import teamport.aether.item.item_tool.ItemToolPickaxeAether;
 import java.util.Random;
 
 
-public class PaxelAetherTool extends ItemToolPickaxeAether {
+public class ToolPaxelAether extends ItemToolPickaxeAether {
 
-    public PaxelAetherTool(String name, String namespaceId, int id, ToolMaterial toolMaterial) {
+    public ToolPaxelAether(String name, String namespaceId, int id, ToolMaterial toolMaterial) {
         super(name, namespaceId, id, toolMaterial);
         this.setMaxDamage(toolMaterial.getDurability() * 2);
     }

@@ -1,5 +1,7 @@
 package camoweed.campatibility.item.paxel;
 
+import luke.paxels.ItemToolPaxel;
+import luke.paxels.compat.commandly.PaxelCommandlyRules;
 import net.example.superheatedsteel.item.SuperheatedIgnite;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockLogicLog;
@@ -13,7 +15,6 @@ import net.minecraft.core.entity.player.Player;
 import net.minecraft.core.enums.EnumBlockSoundEffectType;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.material.ToolMaterial;
-import net.minecraft.core.item.tool.ItemToolPickaxe;
 import net.minecraft.core.util.helper.Direction;
 import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
@@ -21,11 +22,12 @@ import net.minecraft.core.world.pos.TilePos;
 import net.minecraft.core.world.pos.TilePosc;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import redart15.commandly.veincapitator.VeinMining;
 
 import java.util.Random;
 
-public class PaxelSuperheatedSteel extends ItemToolPickaxe {
-	public PaxelSuperheatedSteel(String name, String namespaceId, int id, ToolMaterial toolMaterial) {
+public class ToolPaxelSuperheatedSteel extends ItemToolPaxel {
+	public ToolPaxelSuperheatedSteel(String name, String namespaceId, int id, ToolMaterial toolMaterial) {
 		super(name, namespaceId, id, toolMaterial);
 		this.setMaxDamage(toolMaterial.getDurability() * 2);
 	}
@@ -44,19 +46,19 @@ public class PaxelSuperheatedSteel extends ItemToolPickaxe {
 	}
 
 	public boolean beforeBlockDestroyed(@NotNull ItemStack selfStack, @NotNull World world, @NotNull Player player, @NotNull Block<?> block, @NotNull TilePosc blockPos, @NotNull Side side) {
-		if (!world.isClientSide && (Boolean)world.getGameRuleValue(GameRules.TREECAPITATOR) && !player.isSneaking()) {
+		if (!world.isClientSide && world.getGameRuleValue(GameRules.TREECAPITATOR) && !player.isSneaking()) {
 			Block<?> b = world.getBlockType(blockPos);
 			if (Block.hasLogicClass(b, BlockLogicLog.class)) {
 				return !(new TreecapitatorHelper(world, blockPos.x(), blockPos.y(), blockPos.z(), player)).chopTree();
 			}
 		}
 
-//		if (!world.isClientSide && PaxelCommandlyRules.canVeinMine(world) && !player.isSneaking()) {
-//			VeinMining veinMining = VeinMining.veinMining(world, selfStack, blockPos, player);
-//			return !veinMining.setMiningTags(new Tag[]{BlockTags.MINEABLE_BY_PICKAXE}).mine(block, side);
-//		} else {
+		if (!world.isClientSide && PaxelCommandlyRules.canVeinMine(world) && !player.isSneaking()) {
+			VeinMining veinMining = VeinMining.veinMining(world, selfStack, blockPos, player);
+			return !veinMining.setMiningTags(BlockTags.MINEABLE_BY_PICKAXE).mine(block, side);
+		} else {
 			return true;
-//		}
+		}
 	}
 
 	public boolean onUseOnBlock(@NotNull ItemStack selfStack, @NotNull World world, @Nullable Player player, @NotNull TilePosc blockPos, @NotNull Side side, double xHit, double yHit) {
@@ -68,7 +70,7 @@ public class PaxelSuperheatedSteel extends ItemToolPickaxe {
 		int blockID = world.getBlockType(blockPos).id();
 		Block<?> blockAbove = world.getBlockType(blockAbovePos);
 		if (side != Side.BOTTOM && blockAbove.id() == Blocks.AIR.id() && (blockID == Blocks.GRASS.id() || blockID == Blocks.DIRT.id() || blockID == Blocks.GRASS_RETRO.id() || blockID == Blocks.FARMLAND_DIRT.id())) {
-			world.playBlockSoundEffect(entityplayer, (double)((float)blockPos.x() + 0.5F), (double)((float)blockPos.y() + 0.5F), (double)((float)blockPos.z() + 0.5F), Blocks.getBlock(blockID), EnumBlockSoundEffectType.PLACE);
+			world.playBlockSoundEffect(entityplayer, (float)blockPos.x() + 0.5F, (float)blockPos.y() + 0.5F, (float)blockPos.z() + 0.5F, Blocks.getBlock(blockID), EnumBlockSoundEffectType.PLACE);
 			if (!world.isClientSide) {
 				world.setBlockDataNotify(blockPos, Blocks.PATH_DIRT.id());
 				itemstack.damageItem(1, entityplayer);
@@ -82,9 +84,9 @@ public class PaxelSuperheatedSteel extends ItemToolPickaxe {
 
 	public void onUseByActivator(@NotNull ItemStack selfStack, @NotNull World world, @NotNull TileEntityActivator activator, @NotNull Random random, @NotNull TilePosc blockPos, @NotNull Direction direction, double offX, double offY, double offZ) {
 		TilePosc tilePosc = blockPos.add(direction, new TilePos(blockPos));
-		this.shovelBlock(selfStack, world, (Player)null, tilePosc, direction.side());
+		this.shovelBlock(selfStack, world, null, tilePosc, direction.side());
 	}
-	public boolean hitEntity(ItemStack selfStack, Mob target, Mob attacker) {
+	public boolean hitEntity(@NotNull ItemStack selfStack, @NotNull Mob target, @NotNull Mob attacker) {
 		boolean result = super.hitEntity(selfStack, target, attacker);
 		SuperheatedIgnite.apply(target);
 		return result;

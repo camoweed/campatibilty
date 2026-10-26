@@ -122,6 +122,8 @@ public class Campatibility implements ModInitializer {
 			CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PaxelRoseToolsItems::initializeItems);
 			ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PaxelRoseToolsModels::beforeClientStart);
 			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PaxelRoseToolsModels::initItemModels);
+			CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PaxelRoseToolsRecipes::initNamespaces);
+			CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PaxelRoseToolsRecipes::onRecipesReady);
 		}
 	}
 	private static class PaxelandBTFLoaded {
@@ -129,6 +131,8 @@ public class Campatibility implements ModInitializer {
 			CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PaxelBTFItems::initializeItems);
 			ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PaxelBTFModels::beforeClientStart);
 			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PaxelBTFModels::initItemModels);
+			CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PaxelBTFRecipes::initNamespaces);
+			CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PaxelBTFRecipes::onRecipesReady);
 		}
 	}
 	private static class PaxelandSuperheatedSteelLoaded {
@@ -136,6 +140,8 @@ public class Campatibility implements ModInitializer {
 			CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PaxelSuperheatedSteelItems::initializeItems);
 			ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PaxelSuperheatedSteelModels::beforeClientStart);
 			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PaxelSuperheatedSteelModels::initItemModels);
+			CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PaxelSuperheatedSteelRecipes::initNamespaces);
+			CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PaxelSuperheatedSteelRecipes::onRecipesReady);
 		}
 	}
 	private static class PaxelsandAetherLoaded {

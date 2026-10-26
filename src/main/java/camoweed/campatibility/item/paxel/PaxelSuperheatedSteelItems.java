@@ -16,7 +16,7 @@ public class PaxelSuperheatedSteelItems {
 	public static void initializeItems() {
 		TOOL_PAXEL_SUPERHEATED_STEEL = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
-			.build(new PaxelSuperheatedSteel(
+			.build(new ToolPaxelSuperheatedSteel(
 				"tool.paxel.superheated_steel",
 				itemKey("tool_paxel_superheated_steel"),
 				20008,

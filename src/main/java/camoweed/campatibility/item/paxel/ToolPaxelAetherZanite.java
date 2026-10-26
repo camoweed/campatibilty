@@ -9,8 +9,8 @@ import teamport.aether.block.AetherBlockTags;
 
 import static teamport.aether.AetherGlobals.ZANITE_MULTIPLIER;
 
-public class PaxelAetherToolZanite extends PaxelAetherTool {
-	public PaxelAetherToolZanite(String name, String namespaceId, int id, ToolMaterial toolMaterial) {
+public class ToolPaxelAetherZanite extends ToolPaxelAether {
+	public ToolPaxelAetherZanite(String name, String namespaceId, int id, ToolMaterial toolMaterial) {
 		super(name, namespaceId, id, toolMaterial);
 	}
 	@Override

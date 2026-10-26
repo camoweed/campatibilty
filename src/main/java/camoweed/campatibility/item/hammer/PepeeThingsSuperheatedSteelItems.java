@@ -18,7 +18,7 @@ public class PepeeThingsSuperheatedSteelItems {
 	public static void initializeItems() {
 		TOOL_HAMMER_SUPERHEATED_STEEL = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
-			.build(new ItemToolHammer(
+			.build(new ToolHammerSuperheatedSteel(
 				"tool.hammer.superheated_steel",
 				itemKey("tool_hammer_superheated_steel"),
 				20032,

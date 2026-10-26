@@ -20,10 +20,10 @@ import teamport.aether.entity.floating_block.EntityFloatingBlock;
 import teamport.aether.item.AetherHasCustomDamageType;
 import turniplabs.halplibe.helper.EnvironmentHelper;
 
-public class PaxelAetherToolGravitite extends  PaxelAetherTool implements AetherHasCustomDamageType {
+public class ToolPaxelAetherGravitite extends ToolPaxelAether implements AetherHasCustomDamageType {
 	private static final float KNOCKBACK_STRENGTH = 3.0F/4.0F;
 	private static final float LIFT = KNOCKBACK_STRENGTH;
-	public PaxelAetherToolGravitite(String name, String namespaceId, int id, ToolMaterial toolMaterial) {
+	public ToolPaxelAetherGravitite(String name, String namespaceId, int id, ToolMaterial toolMaterial) {
 		super(name, namespaceId, id, toolMaterial);
 	}
 	@Override

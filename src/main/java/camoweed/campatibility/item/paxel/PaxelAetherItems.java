@@ -23,42 +23,42 @@ public class PaxelAetherItems {
 	public static void initializeItems() {
 		TOOL_PAXEL_SKYROOT = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
-			.build(new PaxelAetherTool(
+			.build(new ToolPaxelAether(
 				"tool.paxel.skyroot",
 				itemKey("tool_paxel_skyroot"),
 				20020,
 				AetherToolMaterial.SKYROOT));
 		TOOL_PAXEL_HOLYSTONE = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
-			.build(new PaxelAetherToolHolystone(
+			.build(new ToolPaxelAetherHolystone(
 				"tool.paxel.holystone",
 				itemKey("tool_paxel_holystone"),
 				20021,
 				AetherToolMaterial.HOLYSTONE));
 		TOOL_PAXEL_ZANITE = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
-			.build(new PaxelAetherToolZanite(
+			.build(new ToolPaxelAetherZanite(
 				"tool.paxel.zanite",
 				itemKey("tool_paxel_zanite"),
 				20022,
 				AetherToolMaterial.ZANITE));
 		TOOL_PAXEL_GRAVITITE = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
-			.build(new PaxelAetherToolGravitite(
+			.build(new ToolPaxelAetherGravitite(
 				"tool.paxel.gravitite",
 				itemKey("tool_paxel_gravitite"),
 				20023,
 				AetherToolMaterial.GRAVITITE));
 		TOOL_PAXEL_VALKYRIE = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
-			.build(new PaxelAetherToolValkyrie(
+			.build(new ToolPaxelAetherValkyrie(
 				"tool.paxel.valkyrie",
 				itemKey("tool_paxel_valkyrie"),
 				20024,
 				AetherToolMaterial.VALKYRIE));
 		TOOL_PAXEL_PHEONIX = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> Items.TOOL_SWORD_STEEL))
-			.build(new PaxelAetherToolPhoenix(
+			.build(new ToolPaxelAetherPhoenix(
 				"tool.paxel.phoenix",
 				itemKey("tool_paxel_phoenix"),
 				20025,
