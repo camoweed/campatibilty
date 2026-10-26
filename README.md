@@ -24,7 +24,8 @@ depending on your modlist you can see different benefits
 
 ![Rose Hammer item texture.](https://raw.githubusercontent.com/camoweed/campatibilty/refs/heads/8.0/src/main/resources/assets/campatibility/textures/item/tool_hammer_rose.png) Rose Hammer\
 ![Iridescite Hammer item texture.](https://raw.githubusercontent.com/camoweed/campatibilty/refs/heads/8.0/src/main/resources/assets/campatibility/textures/item/tool_hammer_iridescite.png) Iridescite Hammer\
-![Superheated Steel Hammer item texture.](https://raw.githubusercontent.com/camoweed/campatibilty/refs/heads/8.0/src/main/resources/assets/campatibility/textures/item/tool_hammer_superheated_steel.png) Superheated Hammer
+![Superheated Steel Hammer item texture.](https://raw.githubusercontent.com/camoweed/campatibilty/refs/heads/8.0/src/main/resources/assets/campatibility/textures/item/tool_hammer_superheated_steel.png) Superheated Hammer\
+![Holystone Hammer item texture.](https://raw.githubusercontent.com/camoweed/campatibilty/refs/heads/8.0/src/main/resources/assets/campatibility/textures/item/tool_hammer_holystone.png)Aether Hammers ![Holystone Hammer item texture.](https://raw.githubusercontent.com/camoweed/campatibilty/refs/heads/8.0/src/main/resources/assets/campatibility/textures/item/tool_hammer_zanite.png) ![Gravitite Hammer item texture.](https://raw.githubusercontent.com/camoweed/campatibilty/refs/heads/8.0/src/main/resources/assets/campatibility/textures/item/tool_hammer_gravitite.png) ![Valkyrie Hammer item texture.](https://raw.githubusercontent.com/camoweed/campatibilty/refs/heads/8.0/src/main/resources/assets/campatibility/textures/item/tool_hammer_valkyrie.png) ![Phoenix Hammer item texture.](https://raw.githubusercontent.com/camoweed/campatibilty/refs/heads/8.0/src/main/resources/assets/campatibility/textures/item/tool_hammer_phoenix.png)
 <!--![Paxels and Better with Aether mod in the ultimate crossover.](https://assets.rosesmp.com/share/forumimages/campatibility/paxelaetherrecipes.png)-->
 ## Atlas
 <div style="">
@@ -77,10 +78,24 @@ depending on your modlist you can see different benefits
 <tr><td>Paxels</td><td>✘</td><td>☑<br>Paxel</td><td>☑<br>Paxel</td><td>✘</td><td>☻</td><td>☑<br>Paxels</td><td>✘</td>
 <td>☑<br>Paxel</td>
 </tr>
-<tr><td>Aether</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>☑<br>Paxels</td><td>☻</td><td>✘</td>
+<tr><td>Aether</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>☑<br>Paxels</td>
+<td>☻</td>
+<td>☑<br>Hammers</td>
 <td>✘</td>
 </tr>
-<tr><td>Pepee's Things</td><td>✘</td><td>☑<br>Hammer</td><td>☑<br>Hammer</td><td>✘</td><td>✘</td><td>✘</td><td>☻</td>
+<tr><td>Pepee's Things</td>
+<td>✘</td>
+<td>☑<br>Hammer</td>
+<td>☑<br>Hammer</td>
+<td>✘</td>
+<td>✘</td>
+<td>☑<br>Hammers</td>
+<td>☻</td>
 <td>☑<br>Hammer</td>
 </tr>
 <tr><td>Superheated Steel</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>☑<br>Paxel</td><td>✘</td><td>☑<br>Hammer</td>
