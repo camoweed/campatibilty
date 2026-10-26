@@ -15,8 +15,9 @@ import teamport.aether.item.item_tool.item_tool_phoenix.PhoenixAdjustBlockDroppe
 import teamport.aether.mixin.accessors.EntityAccessor;
 
 public class ToolPaxelAetherPhoenix extends ToolPaxelAether implements AetherHasCustomDamageType, PhoenixAdjustBlockDropped {
+
 	public ToolPaxelAetherPhoenix(String name, String namespaceId, int id, ToolMaterial toolMaterial) {
-		super(name, namespaceId, id, toolMaterial);
+		super(name,namespaceId,id,toolMaterial);
 	}
 	@Override
 	public boolean hitEntity(@NotNull ItemStack itemstack, @NotNull Mob target, @NotNull Mob attacker) {

@@ -10,6 +10,10 @@ import turniplabs.halplibe.helper.creativeInventory.CreativeInventoryPlacement;
 
 public class PepeeThingsAetherItems {
 	public static Item TOOL_HAMMER_HOLYSTONE;
+	public static Item TOOL_HAMMER_ZANITE;
+	public static Item TOOL_HAMMER_GRAVITITE;
+	public static Item TOOL_HAMMER_VALKYRIE;
+	public static Item TOOL_HAMMER_PHOENIX;
 
 	public static String itemKey(String string) {
 		return "campatibility" + ":item/" + string;
@@ -24,6 +28,42 @@ public class PepeeThingsAetherItems {
 				20033,
 				ItemToolHammer.Tool.PICKAXE,
 				AetherToolMaterial.HOLYSTONE,
+				BlockTags.MINEABLE_BY_PICKAXE));
+		TOOL_HAMMER_ZANITE = new ItemBuilder("campatibility")
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
+			.build(new ToolHammerAetherZanite(
+				"tool.hammer.zanite",
+				itemKey("tool_hammer_zanite"),
+				20034,
+				ItemToolHammer.Tool.PICKAXE,
+				AetherToolMaterial.GRAVITITE,
+				BlockTags.MINEABLE_BY_PICKAXE));
+		TOOL_HAMMER_GRAVITITE = new ItemBuilder("campatibility")
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
+			.build(new ToolHammerAetherGravitite(
+				"tool.hammer.gravitite",
+				itemKey("tool_hammer_gravitite"),
+				20035,
+				ItemToolHammer.Tool.PICKAXE,
+				AetherToolMaterial.GRAVITITE,
+				BlockTags.MINEABLE_BY_PICKAXE));
+		TOOL_HAMMER_VALKYRIE = new ItemBuilder("campatibility")
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
+			.build(new ToolHammerAetherValkyrie(
+				"tool.hammer.valkyrie",
+				itemKey("tool_hammer_valkyrie"),
+				20036,
+				ItemToolHammer.Tool.PICKAXE,
+				AetherToolMaterial.VALKYRIE,
+				BlockTags.MINEABLE_BY_PICKAXE));
+		TOOL_HAMMER_PHOENIX = new ItemBuilder("campatibility")
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
+			.build(new ToolHammerAetherPhoenix(
+				"tool.hammer.phoenix",
+				itemKey("tool_hammer_phoenix"),
+				20037,
+				ItemToolHammer.Tool.PICKAXE,
+				AetherToolMaterial.PHOENIX,
 				BlockTags.MINEABLE_BY_PICKAXE));
 	}
 }
