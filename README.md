@@ -4,7 +4,6 @@ uninstrusive mod compability
 
 # Features
 depending on your modlist you can see different benefits
-<style>td, th {text-align:center;}</style>
 <div style="">
 <table>
 <tr>
