@@ -49,7 +49,7 @@ depending on your modlist you can see different benefits
 <tr><td>Aether</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>☑<br>Paxels</td><td>☻</td><td>✘</td>
 <td>✘</td>
 </tr>
-<tr><td>Pepee's Things</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>☻</td>
+<tr><td>Pepee's Things</td><td>✘</td><td>☑<br>Hammer</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>☻</td>
 <td>☑<br>Hammer</td>
 </tr>
 <tr><td>Superheated Steel</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>☑<br>Paxel</td><td>✘</td><td>☑<br>Hammer</td>
