@@ -53,14 +53,22 @@ depending on your modlist you can see different benefits
 <td>Rose Tools</td>
 <td>☑<br>Quests</td>
 <td>☻</td>
-<td>☑<br>Paxel</td>
+<td>✘</td>
 <td>✘</td>
 <td>☑<br>Paxel</td>
 <td>✘</td>
 <td>☑<br>Hammer</td>
 <td>✘</td>
 </tr>
-<tr><td>Better than Fishing</td><td>☑<br>Quests</td><td>✘</td><td>☻</td><td>✘</td><td>☑<br>Paxel</td><td>✘</td><td>☑<br>Hammer</td>
+<tr>
+<td>Better than Fishing</td>
+<td>☑<br>Quests</td>
+<td>✘</td>
+<td>☻</td>
+<td>✘</td>
+<td>☑<br>Paxel</td>
+<td>✘</td>
+<td>☑<br>Hammer</td>
 <td>✘</td>
 </tr>
 <tr><td>Stardew Farming</td><td>☑<br>Quests</td><td>✘</td><td>✘</td><td>☻</td><td>✘</td><td>✘</td><td>✘</td>

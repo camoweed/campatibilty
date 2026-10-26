@@ -141,3 +141,5 @@ item.campatibility.tool.hammer.iridescite.name=Iridescite Hammer
 item.campatibility.tool.hammer.iridescite.desc=Hammer some stone with this glistening tool. Breaks only one block while crouching.
 item.campatibility.tool.hammer.superheated_steel.name=Superheated Steel Hammer
 item.campatibility.tool.hammer.superheated_steel.desc=Hammer some stone with this unstable tool. Breaks only one block while crouching.
+item.campatibility.tool.hammer.holystone.name=Holystone Hammer
+item.campatibility.tool.hammer.holystone.desc=Hammer some holystone with this holystone tool. Breaks only one block while crouching

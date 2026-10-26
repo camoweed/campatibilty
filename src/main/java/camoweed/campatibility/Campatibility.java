@@ -43,6 +43,7 @@ public class Campatibility implements ModInitializer {
 	public static final boolean PeepeeThingsandRoseTools;
 	public static final boolean PeepeeThingsandBTF;
 	public static final boolean PeepeeThingsandSuperheatedSteel;
+	public static final boolean PeepeeThingsandAether;
 
 	public static final TomlConfigHandler CFG;
 	static {
@@ -60,6 +61,7 @@ public class Campatibility implements ModInitializer {
 		cfg.addEntry("Items.ThingsxRoseTools", "Rose Hammer", true);
 		cfg.addEntry("Items.ThingsxBetterThanFishing", "Iridescite Hammer", true);
 		cfg.addEntry("Items.ThingsxSuperheatedSteel", "Superheated Steel Hammer", true);
+		cfg.addEntry("Items.ThingsxAether", "Aether Hammers", true);
 
 		CFG = new TomlConfigHandler(MOD_ID, cfg);
 
@@ -74,6 +76,7 @@ public class Campatibility implements ModInitializer {
 		PeepeeThingsandRoseTools = CFG.getBoolean("Items.ThingsxRoseTools");
 		PeepeeThingsandBTF =  CFG.getBoolean("Items.ThingsxBetterThanFishing");
 		PeepeeThingsandSuperheatedSteel =  CFG.getBoolean("Items.ThingsxSuperheatedSteel");
+		PeepeeThingsandAether =  CFG.getBoolean("Items.ThingsxAether");
 
 	}
 
@@ -88,6 +91,7 @@ public class Campatibility implements ModInitializer {
 		if (things && roseTools && PeepeeThingsandRoseTools) {LOGGER.info("☑ Pepee's Things + Rose Tools is active!");PeepeeThingsandRoseToolsLoaded.init();}
 		if (things && btfishing && PeepeeThingsandBTF) {LOGGER.info("☑ Pepee's Things + Better than Fishing is active!");PeepeeThingsandBTFLoaded.init();}
 		if (things && heatedSteel && PeepeeThingsandSuperheatedSteel) {LOGGER.info("☑ Pepee's Things + Superheated Steel is active!");PeepeeThingsandSuperheatedSteelLoaded.init();}
+		if (things && aether && PeepeeThingsandAether) {LOGGER.info("☑ Pepee's Things + Aether is active!");PeepeeThingsandAetherLoaded.init();}
 	}
 	public void beforeGameStart() {}
 	public void afterGameStart() {
@@ -178,6 +182,15 @@ public class Campatibility implements ModInitializer {
 			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PepeeThingsSuperheatedSteelModels::initItemModels);
 			CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PepeeThingsSuperheatedSteelRecipes::initNamespaces);
 			CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PepeeThingsSuperheatedSteelRecipes::onRecipesReady);
+		}
+	}
+	private static class PeepeeThingsandAetherLoaded {
+		static void init() {
+			CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PepeeThingsAetherItems::initializeItems);
+			ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PepeeThingsAetherModels::beforeClientStart);
+			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PepeeThingsAetherModels::initItemModels);
+//			CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PepeeThingsAetherRecipes::initNamespaces);
+//			CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PepeeThingsAetherRecipes::onRecipesReady);
 		}
 	}
 }
