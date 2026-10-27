@@ -14,6 +14,11 @@ public class PepeeThingsAetherItems {
 	public static Item TOOL_HAMMER_GRAVITITE;
 	public static Item TOOL_HAMMER_VALKYRIE;
 	public static Item TOOL_HAMMER_PHOENIX;
+	public static Item TOOL_SPADE_HOLYSTONE;
+	public static Item TOOL_SPADE_ZANITE;
+	public static Item TOOL_SPADE_GRAVITITE;
+	public static Item TOOL_SPADE_VALKYRIE;
+	public static Item TOOL_SPADE_PHOENIX;
 
 	public static String itemKey(String string) {
 		return "campatibility" + ":item/" + string;
@@ -65,5 +70,50 @@ public class PepeeThingsAetherItems {
 				ItemToolHammer.Tool.PICKAXE,
 				AetherToolMaterial.PHOENIX,
 				BlockTags.MINEABLE_BY_PICKAXE));
+		TOOL_SPADE_HOLYSTONE = new ItemBuilder("campatibility")
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
+			.build(new ToolHammerAetherHolystone(
+				"tool.spade.holystone",
+				itemKey("tool_spade_holystone"),
+				20040,
+				ItemToolHammer.Tool.SHOVEL,
+				AetherToolMaterial.HOLYSTONE,
+				BlockTags.MINEABLE_BY_SHOVEL));
+		TOOL_SPADE_ZANITE = new ItemBuilder("campatibility")
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
+			.build(new ToolHammerAetherZanite(
+				"tool.spade.zanite",
+				itemKey("tool_spade_zanite"),
+				20041,
+				ItemToolHammer.Tool.SHOVEL,
+				AetherToolMaterial.GRAVITITE,
+				BlockTags.MINEABLE_BY_SHOVEL));
+		TOOL_SPADE_GRAVITITE = new ItemBuilder("campatibility")
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
+			.build(new ToolHammerAetherGravitite(
+				"tool.spade.gravitite",
+				itemKey("tool_spade_gravitite"),
+				20042,
+				ItemToolHammer.Tool.SHOVEL,
+				AetherToolMaterial.GRAVITITE,
+				BlockTags.MINEABLE_BY_SHOVEL));
+		TOOL_SPADE_VALKYRIE = new ItemBuilder("campatibility")
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
+			.build(new ToolHammerAetherValkyrie(
+				"tool.spade.valkyrie",
+				itemKey("tool_spade_valkyrie"),
+				20043,
+				ItemToolHammer.Tool.SHOVEL,
+				AetherToolMaterial.VALKYRIE,
+				BlockTags.MINEABLE_BY_SHOVEL));
+		TOOL_SPADE_PHOENIX = new ItemBuilder("campatibility")
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
+			.build(new ToolHammerAetherPhoenix(
+				"tool.spade.phoenix",
+				itemKey("tool_spade_phoenix"),
+				20044,
+				ItemToolHammer.Tool.SHOVEL,
+				AetherToolMaterial.PHOENIX,
+				BlockTags.MINEABLE_BY_SHOVEL));
 	}
 }
