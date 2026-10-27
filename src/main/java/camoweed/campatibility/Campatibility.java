@@ -10,12 +10,16 @@ import camoweed.campatibility.item.hammer.aether.PepeeThingsAetherRecipes;
 import camoweed.campatibility.item.hammer.btf.PepeeThingsBTFItems;
 import camoweed.campatibility.item.hammer.btf.PepeeThingsBTFModels;
 import camoweed.campatibility.item.hammer.btf.PepeeThingsBTFRecipes;
+import camoweed.campatibility.item.hammer.moonsteel.PepeeThingsMoonsteelItems;
+import camoweed.campatibility.item.hammer.moonsteel.PepeeThingsMoonsteelModels;
 import camoweed.campatibility.item.hammer.rosesword.PepeeThingsRoseToolsItems;
 import camoweed.campatibility.item.hammer.rosesword.PepeeThingsRoseToolsModels;
 import camoweed.campatibility.item.hammer.rosesword.PepeeThingsRoseToolsRecipes;
 import camoweed.campatibility.item.hammer.superheatedsteel.PepeeThingsSuperheatedSteelItems;
 import camoweed.campatibility.item.hammer.superheatedsteel.PepeeThingsSuperheatedSteelModels;
 import camoweed.campatibility.item.hammer.superheatedsteel.PepeeThingsSuperheatedSteelRecipes;
+import camoweed.campatibility.item.hammer.tlotd.PepeeThingsTLOTDItems;
+import camoweed.campatibility.item.hammer.tlotd.PepeeThingsTLOTDModels;
 import camoweed.campatibility.item.paxel.aether.PaxelAetherItems;
 import camoweed.campatibility.item.paxel.aether.PaxelAetherModels;
 import camoweed.campatibility.item.paxel.aether.PaxelAetherRecipes;
@@ -227,18 +231,18 @@ public class Campatibility implements ModInitializer {
 	}
 	private static class PeepeeThingsandMoonsteelLoaded {
 		static void init() {
-		//	CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PepeeThingsMoonsteelItems::initializeItems);
-		//	ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PepeeThingsMoonsteelModels::beforeClientStart);
-		//	ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PepeeThingsMoonsteelModels::initItemModels);
+			CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PepeeThingsMoonsteelItems::initializeItems);
+			ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PepeeThingsMoonsteelModels::beforeClientStart);
+			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PepeeThingsMoonsteelModels::initItemModels);
 		//	CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PepeeThingsMoonsteelRecipes::initNamespaces);
 		//	CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PepeeThingsMoonsteelRecipes::onRecipesReady);
 		}
 	}
 	private static class PeepeeThingsandTLOTDLoaded {
 		static void init() {
-		//	CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PepeeThingsTLOTDItems::initializeItems);
-		//	ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PepeeThingsTLOTDModels::beforeClientStart);
-		//	ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PepeeThingsTLOTDModels::initItemModels);
+			CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PepeeThingsTLOTDItems::initializeItems);
+			ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PepeeThingsTLOTDModels::beforeClientStart);
+			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PepeeThingsTLOTDModels::initItemModels);
 		//	CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PepeeThingsTLOTDRecipes::initNamespaces);
 		//	CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PepeeThingsTLOTDRecipes::onRecipesReady);
 		}
