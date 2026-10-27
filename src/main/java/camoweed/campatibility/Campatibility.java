@@ -4,8 +4,30 @@ import camoweed.campatibility.api.impl.vintagequesting.BTFishingQuests;
 import camoweed.campatibility.api.impl.vintagequesting.DefaultQuest;
 import camoweed.campatibility.api.impl.vintagequesting.RoseToolsQuests;
 import camoweed.campatibility.api.impl.vintagequesting.StardewQuests;
-import camoweed.campatibility.item.hammer.*;
-import camoweed.campatibility.item.paxel.*;
+import camoweed.campatibility.item.hammer.aether.PepeeThingsAetherItems;
+import camoweed.campatibility.item.hammer.aether.PepeeThingsAetherModels;
+import camoweed.campatibility.item.hammer.aether.PepeeThingsAetherRecipes;
+import camoweed.campatibility.item.hammer.btf.PepeeThingsBTFItems;
+import camoweed.campatibility.item.hammer.btf.PepeeThingsBTFModels;
+import camoweed.campatibility.item.hammer.btf.PepeeThingsBTFRecipes;
+import camoweed.campatibility.item.hammer.rosesword.PepeeThingsRoseToolsItems;
+import camoweed.campatibility.item.hammer.rosesword.PepeeThingsRoseToolsModels;
+import camoweed.campatibility.item.hammer.rosesword.PepeeThingsRoseToolsRecipes;
+import camoweed.campatibility.item.hammer.superheatedsteel.PepeeThingsSuperheatedSteelItems;
+import camoweed.campatibility.item.hammer.superheatedsteel.PepeeThingsSuperheatedSteelModels;
+import camoweed.campatibility.item.hammer.superheatedsteel.PepeeThingsSuperheatedSteelRecipes;
+import camoweed.campatibility.item.paxel.aether.PaxelAetherItems;
+import camoweed.campatibility.item.paxel.aether.PaxelAetherModels;
+import camoweed.campatibility.item.paxel.aether.PaxelAetherRecipes;
+import camoweed.campatibility.item.paxel.btf.PaxelBTFItems;
+import camoweed.campatibility.item.paxel.btf.PaxelBTFModels;
+import camoweed.campatibility.item.paxel.btf.PaxelBTFRecipes;
+import camoweed.campatibility.item.paxel.rosesword.PaxelRoseToolsItems;
+import camoweed.campatibility.item.paxel.rosesword.PaxelRoseToolsModels;
+import camoweed.campatibility.item.paxel.rosesword.PaxelRoseToolsRecipes;
+import camoweed.campatibility.item.paxel.superheatedsteel.PaxelSuperheatedSteelItems;
+import camoweed.campatibility.item.paxel.superheatedsteel.PaxelSuperheatedSteelModels;
+import camoweed.campatibility.item.paxel.superheatedsteel.PaxelSuperheatedSteelRecipes;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import org.slf4j.Logger;
@@ -30,6 +52,8 @@ public class Campatibility implements ModInitializer {
 	boolean heatedSteel = FabricLoader.getInstance().isModLoaded("superheatedsteel");
 	boolean aether = FabricLoader.getInstance().isModLoaded("aether");
 	boolean things = FabricLoader.getInstance().isModLoaded("pepeethings");
+	boolean mmm = FabricLoader.getInstance().isModLoaded("moonsteel");
+	boolean tlotd = FabricLoader.getInstance().isModLoaded("tlotd");
 
 	Key KEY = Key.of(MOD_ID);
 	public static final boolean RoseToolQuests;
@@ -44,6 +68,8 @@ public class Campatibility implements ModInitializer {
 	public static final boolean PeepeeThingsandBTF;
 	public static final boolean PeepeeThingsandSuperheatedSteel;
 	public static final boolean PeepeeThingsandAether;
+	public static final boolean PeepeeThingsandMoonsteel;
+	public static final boolean PeepeeThingsandTLOTD;
 
 	public static final TomlConfigHandler CFG;
 	static {
@@ -58,10 +84,12 @@ public class Campatibility implements ModInitializer {
 		cfg.addEntry("Items.PaxelsxBetterThanFishing", "Iridescite Paxel", true);
 		cfg.addEntry("Items.PaxelsxSuperheatedSteel", "Superheated Steel Paxel", true);
 		cfg.addEntry("Items.PaxelsxAether", "Aether tool tier Paxels", true);
-		cfg.addEntry("Items.ThingsxRoseTools", "Rose Hammer", true);
-		cfg.addEntry("Items.ThingsxBetterThanFishing", "Iridescite Hammer", true);
-		cfg.addEntry("Items.ThingsxSuperheatedSteel", "Superheated Steel Hammer", true);
-		cfg.addEntry("Items.ThingsxAether", "Aether Hammers", true);
+		cfg.addEntry("Items.ThingsxRoseTools", "Rose Hammer and Spade", true);
+		cfg.addEntry("Items.ThingsxBetterThanFishing", "Iridescite Hammer and Spade", true);
+		cfg.addEntry("Items.ThingsxSuperheatedSteel", "Superheated Steel Hammer and Spade", true);
+		cfg.addEntry("Items.ThingsxAether", "Aether Hammers and Spades", true);
+		cfg.addEntry("Items.ThingsxMoonMoonMoon", "Moonsteel Hammers and Spade", true);
+		cfg.addEntry("Items.ThingsxTLOTD", "TLOTD Hammers and Spades", true);
 
 		CFG = new TomlConfigHandler(MOD_ID, cfg);
 
@@ -77,6 +105,8 @@ public class Campatibility implements ModInitializer {
 		PeepeeThingsandBTF =  CFG.getBoolean("Items.ThingsxBetterThanFishing");
 		PeepeeThingsandSuperheatedSteel =  CFG.getBoolean("Items.ThingsxSuperheatedSteel");
 		PeepeeThingsandAether =  CFG.getBoolean("Items.ThingsxAether");
+		PeepeeThingsandMoonsteel =  CFG.getBoolean("Items.ThingsxMoonMoonMoon");
+		PeepeeThingsandTLOTD =  CFG.getBoolean("Items.ThingsxTLOTD");
 
 	}
 
@@ -92,6 +122,8 @@ public class Campatibility implements ModInitializer {
 		if (things && btfishing && PeepeeThingsandBTF) {LOGGER.info("☑ Pepee's Things + Better than Fishing is active!");PeepeeThingsandBTFLoaded.init();}
 		if (things && heatedSteel && PeepeeThingsandSuperheatedSteel) {LOGGER.info("☑ Pepee's Things + Superheated Steel is active!");PeepeeThingsandSuperheatedSteelLoaded.init();}
 		if (things && aether && PeepeeThingsandAether) {LOGGER.info("☑ Pepee's Things + Aether is active!");PeepeeThingsandAetherLoaded.init();}
+		if (things && mmm && PeepeeThingsandMoonsteel) {LOGGER.info("☑ Pepee's Things + MoonMoonMoon is active!");PeepeeThingsandMoonsteelLoaded.init();}
+		if (things && tlotd && PeepeeThingsandTLOTD) {LOGGER.info("☑ Pepee's Things + TLOTD is active!");PeepeeThingsandTLOTDLoaded.init();}
 	}
 	public void beforeGameStart() {}
 	public void afterGameStart() {
@@ -191,6 +223,24 @@ public class Campatibility implements ModInitializer {
 			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PepeeThingsAetherModels::initItemModels);
 			CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PepeeThingsAetherRecipes::initNamespaces);
 			CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PepeeThingsAetherRecipes::onRecipesReady);
+		}
+	}
+	private static class PeepeeThingsandMoonsteelLoaded {
+		static void init() {
+		//	CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PepeeThingsMoonsteelItems::initializeItems);
+		//	ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PepeeThingsMoonsteelModels::beforeClientStart);
+		//	ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PepeeThingsMoonsteelModels::initItemModels);
+		//	CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PepeeThingsMoonsteelRecipes::initNamespaces);
+		//	CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PepeeThingsMoonsteelRecipes::onRecipesReady);
+		}
+	}
+	private static class PeepeeThingsandTLOTDLoaded {
+		static void init() {
+		//	CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PepeeThingsTLOTDItems::initializeItems);
+		//	ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PepeeThingsTLOTDModels::beforeClientStart);
+		//	ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PepeeThingsTLOTDModels::initItemModels);
+		//	CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PepeeThingsTLOTDRecipes::initNamespaces);
+		//	CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PepeeThingsTLOTDRecipes::onRecipesReady);
 		}
 	}
 }

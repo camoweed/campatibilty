@@ -40,12 +40,16 @@ depending on your modlist you can see different benefits
 <th>Aether</th>
 <th>Pepee's Things</th>
 <th>Superheated Steel</th>
+<th>Moonsteel</th>
+<th>TLOTD</th>
 </tr>
 <td>Vintage Questing</td>
 <td>☻</td>
 <td>☑<br>Quests</td>
 <td>☑<br>Quests</td>
 <td>☑<br>Quests</td>
+<td>✘</td>
+<td>✘</td>
 <td>✘</td>
 <td>✘</td>
 <td>✘</td>
@@ -60,6 +64,8 @@ depending on your modlist you can see different benefits
 <td>✘</td>
 <td>☑<br>Hammer</td>
 <td>✘</td>
+<td>✘</td>
+<td>✘</td>
 </tr>
 <tr>
 <td>Better than Fishing</td>
@@ -71,12 +77,18 @@ depending on your modlist you can see different benefits
 <td>✘</td>
 <td>☑<br>Hammer</td>
 <td>✘</td>
+<td>✘</td>
+<td>✘</td>
 </tr>
 <tr><td>Stardew Farming</td><td>☑<br>Quests</td><td>✘</td><td>✘</td><td>☻</td><td>✘</td><td>✘</td><td>✘</td>
+<td>✘</td>
+<td>✘</td>
 <td>✘</td>
 </tr>
 <tr><td>Paxels</td><td>✘</td><td>☑<br>Paxel</td><td>☑<br>Paxel</td><td>✘</td><td>☻</td><td>☑<br>Paxels</td><td>✘</td>
 <td>☑<br>Paxel</td>
+<td>✘</td>
+<td>✘</td>
 </tr>
 <tr><td>Aether</td>
 <td>✘</td>
@@ -85,20 +97,49 @@ depending on your modlist you can see different benefits
 <td>✘</td>
 <td>☑<br>Paxels</td>
 <td>☻</td>
-<td>☑<br>Hammers</td>
+<td>☑<br>Hammers<br>Spades</td>
+<td>✘</td>
+<td>✘</td>
 <td>✘</td>
 </tr>
 <tr><td>Pepee's Things</td>
 <td>✘</td>
-<td>☑<br>Hammer</td>
-<td>☑<br>Hammer</td>
+<td>☑<br>Hammer<br>Spade</td>
+<td>☑<br>Hammer<br>Spade</td>
 <td>✘</td>
 <td>✘</td>
-<td>☑<br>Hammers</td>
+<td>☑<br>Hammers<br>Spades</td>
 <td>☻</td>
-<td>☑<br>Hammer</td>
+<td>☑<br>Hammer<br>Spade</td>
+<td>✘</td>
+<td>✘</td>
 </tr>
 <tr><td>Superheated Steel</td><td>✘</td><td>✘</td><td>✘</td><td>✘</td><td>☑<br>Paxel</td><td>✘</td><td>☑<br>Hammer</td>
+<td>☻</td>
+<td>✘</td>
+<td>✘</td>
+<tr><td>Moonsteel</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>☻</td>
+<td>✘</td>
+</tr>
+<tr><td>TLOTD</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
 <td>☻</td>
 </tr>
 </table>
