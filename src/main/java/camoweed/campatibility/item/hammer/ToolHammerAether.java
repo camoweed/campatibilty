@@ -2,7 +2,6 @@ package camoweed.campatibility.item.hammer;
 
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.Blocks;
-import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.data.tag.Tag;
 import net.minecraft.core.entity.Mob;
 import net.minecraft.core.entity.player.Player;
@@ -29,14 +28,14 @@ public class ToolHammerAether extends ItemToolHammer {
 	}
 	@Override
 	public float getStrVsBlock(@NotNull ItemStack itemstack, Block<?> block) {
-		return block.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_PICKAXE) || block.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_AXE) || block.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_SHOVEL) ? this.material.getEfficiency(false) : 1.0F;
+		return block.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_PICKAXE) || block.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_SHOVEL) ? this.material.getEfficiency(false) : 1.0F;
 	}
 	public boolean canHarvestBlock(@NotNull ItemStack selfStack, @NotNull Mob mob, @NotNull Block<?> block) {
 		int miningLevel = aetherMiningLevels.getOrDefault(block, -1);
 		if (miningLevel != -1) {
 			return this.material.getMiningLevel() >= miningLevel;
 		} else {
-			return block.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_PICKAXE);
+			return this.tool == ItemToolHammer.Tool.SHOVEL ? block.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_SHOVEL) : block.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_PICKAXE);
 		}
 	}
 	@Override
@@ -61,7 +60,7 @@ public class ToolHammerAether extends ItemToolHammer {
 	@Override
 	public boolean onBlockDestroyed(@NotNull ItemStack itemStack, @NotNull World world, @NotNull Mob mob, @NotNull Block<?> removedBlock, @NotNull TilePosc blockPos, @NotNull Side side) {
 		Player player = (Player)mob;
-		if (removedBlock.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_PICKAXE)) {
+		if (removedBlock.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_PICKAXE) || removedBlock.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_SHOVEL)) {
 			if (removedBlock.getHardness() > 0.0F || this.isSilkTouch()) {
 				itemStack.damageItem(4, player);
 				if (player.isSneaking()) {
@@ -113,7 +112,7 @@ public class ToolHammerAether extends ItemToolHammer {
 	private void mine(@NotNull ItemStack itemStack, @NotNull World world, @NotNull Mob mob, Player player, int targetX, int targetY, int targetZ) {
 		TilePosc targetPos = new TilePos(targetX, targetY, targetZ);
 		Block<?> targetBlock = world.getBlockType(targetPos);
-		if(targetBlock.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_PICKAXE)) {
+		if(targetBlock.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_PICKAXE) || targetBlock.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_SHOVEL)) {
 			if (this.canHarvestBlock(itemStack, mob, targetBlock)) {
 				if (player.getGamemode().hasItemDrops()) {
 					targetBlock.onHarvest(world, player, targetPos, 0, null);

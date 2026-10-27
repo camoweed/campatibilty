@@ -24,7 +24,7 @@ public class ToolHammerAetherHolystone extends ToolHammerAether {
 	@Override
 	public boolean onBlockDestroyed(@NotNull ItemStack itemStack, @NotNull World world, @NotNull Mob mob, @NotNull Block<?> removedBlock, @NotNull TilePosc blockPos, @NotNull Side side) {
 		Player player = (Player)mob;
-		if (removedBlock.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_PICKAXE)) {
+		if (removedBlock.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_PICKAXE) || removedBlock.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_SHOVEL)) {
 			if (!EnvironmentHelper.isMultiplayerClient() && itemRand.nextInt(16) == 0 && removedBlock.getHardness() > 0.0F) {
 				world.dropItem(blockPos.x(), blockPos.y(), blockPos.z(), new ItemStack(AMBROSIUM, 1));
 			}
@@ -79,7 +79,7 @@ public class ToolHammerAetherHolystone extends ToolHammerAether {
 	private void mine(@NotNull ItemStack itemStack, @NotNull World world, @NotNull Mob mob, Player player, int targetX, int targetY, int targetZ) {
 		TilePosc targetPos = new TilePos(targetX, targetY, targetZ);
 		Block<?> targetBlock = world.getBlockType(targetPos);
-			if (targetBlock.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_PICKAXE)) {
+			if (targetBlock.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_PICKAXE) || targetBlock.hasTag(AetherBlockTags.MINEABLE_BY_AETHER_SHOVEL)) {
 				if (!EnvironmentHelper.isMultiplayerClient() && itemRand.nextInt(16) == 0 && targetBlock.getHardness() > 0.0F) {
 					world.dropItem(targetPos.x(), targetPos.y(), targetPos.z(), new ItemStack(AMBROSIUM, 1));
 				}

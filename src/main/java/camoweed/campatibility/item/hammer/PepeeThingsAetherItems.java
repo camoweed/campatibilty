@@ -4,6 +4,7 @@ import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.item.Item;
 import qapy.pepeethings.ModItems;
 import qapy.pepeethings.item.ItemToolHammer;
+import teamport.aether.block.AetherBlockTags;
 import teamport.aether.item.item_tool.AetherToolMaterial;
 import turniplabs.halplibe.helper.ItemBuilder;
 import turniplabs.halplibe.helper.creativeInventory.CreativeInventoryPlacement;
@@ -78,7 +79,7 @@ public class PepeeThingsAetherItems {
 				20040,
 				ItemToolHammer.Tool.SHOVEL,
 				AetherToolMaterial.HOLYSTONE,
-				BlockTags.MINEABLE_BY_SHOVEL));
+				AetherBlockTags.MINEABLE_BY_AETHER_SHOVEL));
 		TOOL_SPADE_ZANITE = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
 			.build(new ToolHammerAetherZanite(
@@ -87,7 +88,7 @@ public class PepeeThingsAetherItems {
 				20041,
 				ItemToolHammer.Tool.SHOVEL,
 				AetherToolMaterial.GRAVITITE,
-				BlockTags.MINEABLE_BY_SHOVEL));
+				AetherBlockTags.MINEABLE_BY_AETHER_SHOVEL));
 		TOOL_SPADE_GRAVITITE = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
 			.build(new ToolHammerAetherGravitite(
@@ -96,7 +97,7 @@ public class PepeeThingsAetherItems {
 				20042,
 				ItemToolHammer.Tool.SHOVEL,
 				AetherToolMaterial.GRAVITITE,
-				BlockTags.MINEABLE_BY_SHOVEL));
+				AetherBlockTags.MINEABLE_BY_AETHER_SHOVEL));
 		TOOL_SPADE_VALKYRIE = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
 			.build(new ToolHammerAetherValkyrie(
@@ -105,7 +106,7 @@ public class PepeeThingsAetherItems {
 				20043,
 				ItemToolHammer.Tool.SHOVEL,
 				AetherToolMaterial.VALKYRIE,
-				BlockTags.MINEABLE_BY_SHOVEL));
+				AetherBlockTags.MINEABLE_BY_AETHER_SHOVEL));
 		TOOL_SPADE_PHOENIX = new ItemBuilder("campatibility")
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.After(() -> ModItems.TOOL_HAMMER_STEEL))
 			.build(new ToolHammerAetherPhoenix(
@@ -114,6 +115,6 @@ public class PepeeThingsAetherItems {
 				20044,
 				ItemToolHammer.Tool.SHOVEL,
 				AetherToolMaterial.PHOENIX,
-				BlockTags.MINEABLE_BY_SHOVEL));
+				AetherBlockTags.MINEABLE_BY_AETHER_SHOVEL));
 	}
 }

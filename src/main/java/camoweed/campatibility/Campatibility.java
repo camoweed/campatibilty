@@ -189,8 +189,8 @@ public class Campatibility implements ModInitializer {
 			CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PepeeThingsAetherItems::initializeItems);
 			ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PepeeThingsAetherModels::beforeClientStart);
 			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PepeeThingsAetherModels::initItemModels);
-//			CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PepeeThingsAetherRecipes::initNamespaces);
-//			CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PepeeThingsAetherRecipes::onRecipesReady);
+			CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PepeeThingsAetherRecipes::initNamespaces);
+			CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PepeeThingsAetherRecipes::onRecipesReady);
 		}
 	}
 }
