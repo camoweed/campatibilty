@@ -12,6 +12,7 @@ import camoweed.campatibility.item.hammer.btf.PepeeThingsBTFModels;
 import camoweed.campatibility.item.hammer.btf.PepeeThingsBTFRecipes;
 import camoweed.campatibility.item.hammer.moonsteel.PepeeThingsMoonsteelItems;
 import camoweed.campatibility.item.hammer.moonsteel.PepeeThingsMoonsteelModels;
+import camoweed.campatibility.item.hammer.moonsteel.PepeeThingsMoonsteelRecipes;
 import camoweed.campatibility.item.hammer.rosesword.PepeeThingsRoseToolsItems;
 import camoweed.campatibility.item.hammer.rosesword.PepeeThingsRoseToolsModels;
 import camoweed.campatibility.item.hammer.rosesword.PepeeThingsRoseToolsRecipes;
@@ -20,6 +21,7 @@ import camoweed.campatibility.item.hammer.superheatedsteel.PepeeThingsSuperheate
 import camoweed.campatibility.item.hammer.superheatedsteel.PepeeThingsSuperheatedSteelRecipes;
 import camoweed.campatibility.item.hammer.tlotd.PepeeThingsTLOTDItems;
 import camoweed.campatibility.item.hammer.tlotd.PepeeThingsTLOTDModels;
+import camoweed.campatibility.item.hammer.tlotd.PepeeThingsTLOTDRecipes;
 import camoweed.campatibility.item.paxel.aether.PaxelAetherItems;
 import camoweed.campatibility.item.paxel.aether.PaxelAetherModels;
 import camoweed.campatibility.item.paxel.aether.PaxelAetherRecipes;
@@ -234,8 +236,8 @@ public class Campatibility implements ModInitializer {
 			CommonEvents.AFTER_ITEM_INIT.listen(Key.of(MOD_ID), PepeeThingsMoonsteelItems::initializeItems);
 			ClientEvents.BEFORE_CLIENT_START.listen(Key.of(MOD_ID), PepeeThingsMoonsteelModels::beforeClientStart);
 			ClientEvents.ITEM_MODEL_RELOAD.listen(Key.of(MOD_ID), PepeeThingsMoonsteelModels::initItemModels);
-		//	CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PepeeThingsMoonsteelRecipes::initNamespaces);
-		//	CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PepeeThingsMoonsteelRecipes::onRecipesReady);
+			CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PepeeThingsMoonsteelRecipes::initNamespaces);
+			CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PepeeThingsMoonsteelRecipes::onRecipesReady);
 		}
 	}
 	private static class PeepeeThingsandTLOTDLoaded {

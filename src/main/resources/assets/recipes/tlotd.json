@@ -1,0 +1,156 @@
+[
+  {
+    "name": "campatibility:tlotd/heliorite_hammer",
+    "type:": "minecraft:crafting/shaped",
+    "pattern": [
+      "II ",
+      "IIS",
+      "II "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "tlotd:heliorite_ingot"
+        }
+      }
+    ],
+    "result": {
+      "id": "campatibility:item/tool_hammer_heliorite",
+      "amount": 1
+    },
+    "group": "hammers"
+  },
+  {
+    "name": "campatibility:tlotd/endurium_hammer",
+    "type:": "minecraft:crafting/shaped",
+    "pattern": [
+      "II ",
+      "IIS",
+      "II "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "tlotd:endurium_ingot"
+        }
+      }
+    ],
+    "result": {
+      "id": "campatibility:item/tool_hammer_endurium",
+      "amount": 1
+    },
+    "group": "hammers"
+  },
+  {
+    "name": "campatibility:tlotd/palladium_hammer",
+    "type:": "minecraft:crafting/shaped",
+    "pattern": [
+      "II ",
+      "IIS",
+      "II "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "tlotd:palladium_ingot"
+        }
+      }
+    ],
+    "result": {
+      "id": "campatibility:item/tool_hammer_palladium",
+      "amount": 1
+    },
+    "group": "hammers"
+  },
+  {
+    "name": "campatibility:tlotd/jurassoline_hammer",
+    "type:": "minecraft:crafting/shaped",
+    "pattern": [
+      "II ",
+      "IIS",
+      "II "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "tlotd:jurassoline_ingot"
+        }
+      }
+    ],
+    "result": {
+      "id": "campatibility:item/tool_hammer_jurassoline",
+      "amount": 1
+    },
+    "group": "hammers"
+  },
+  {
+    "name": "campatibility:tlotd/cinnabar_hammer",
+    "type:": "minecraft:crafting/shaped",
+    "pattern": [
+      "II ",
+      "IIS",
+      "II "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "tlotd:cinnabar_ingot"
+        }
+      }
+    ],
+    "result": {
+      "id": "campatibility:item/tool_hammer_cinnabar",
+      "amount": 1
+    },
+    "group": "hammers"
+  },
+  {
+    "name": "campatibility:tlotd/nebular_hammer",
+    "type:": "minecraft:crafting/shaped",
+    "pattern": [
+      "II ",
+      "IIS",
+      "II "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "tlotd:nebular_ingot"
+        }
+      }
+    ],
+    "result": {
+      "id": "campatibility:item/tool_hammer_nebular",
+      "amount": 1
+    },
+    "group": "hammers"
+  },
+  {
+    "name": "campatibility:tlotd/mithril_hammer",
+    "type:": "minecraft:crafting/shaped",
+    "pattern": [
+      "II ",
+      "IIS",
+      "II "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "tlotd:mithril_ingot"
+        }
+      }
+    ],
+    "result": {
+      "id": "campatibility:item/tool_hammer_mithril",
+      "amount": 1
+    },
+    "group": "hammers"
+  }
+]
